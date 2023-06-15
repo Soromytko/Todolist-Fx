@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -23,15 +24,15 @@ public class MainController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         var data = FXCollections.observableArrayList(
-                new TaskItem(false, "https://www.wikipedia.org/", "Наука"),
-                new TaskItem(false, "https://store.steampowered.com/", "Развлечения"),
-                new TaskItem(false, "https://ria.ru/", "Новости")
+                new TaskItem(new CheckBox(), "https://www.wikipedia.org/", "Наука"),
+                new TaskItem(new CheckBox(), "https://store.steampowered.com/", "Развлечения"),
+                new TaskItem(new CheckBox(), "https://ria.ru/", "Новости")
         );
         table.setItems(data);
-        TableColumn<TaskItem, Boolean> statusColumn = new TableColumn<TaskItem, Boolean>("Статус");
+        TableColumn<TaskItem, CheckBox> statusColumn = new TableColumn<TaskItem, CheckBox>("Статус");
         TableColumn<TaskItem, String> taskColumn = new TableColumn<TaskItem, String>("Задача");
         TableColumn<TaskItem, String> deadlineColumn = new TableColumn<TaskItem, String>("Дедлайн");
-        statusColumn.setCellValueFactory(new PropertyValueFactory<TaskItem, Boolean>("status"));
+        statusColumn.setCellValueFactory(new PropertyValueFactory<TaskItem, CheckBox>("status"));
         taskColumn.setCellValueFactory(new PropertyValueFactory<TaskItem, String>("task"));
         deadlineColumn.setCellValueFactory(new PropertyValueFactory<TaskItem, String>("deadline"));
         table.getColumns().set(0, statusColumn);
