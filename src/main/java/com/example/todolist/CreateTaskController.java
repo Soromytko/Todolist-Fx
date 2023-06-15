@@ -16,10 +16,6 @@ public class CreateTaskController {
 
     @FXML private void onOk(ActionEvent event)
     {
-        System.out.println(name.getText());
-        System.out.println(description.getText());
-        System.out.println(deadline.getValue());
-
         TaskItem task = new TaskItem(new CheckBox(), name.getText(), deadline.getValue(), description.getText());
         AppData.tasks.add(task);
 

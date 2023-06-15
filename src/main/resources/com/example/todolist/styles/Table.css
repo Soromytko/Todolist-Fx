@@ -1,0 +1,16 @@
+.table-view .table-cell
+{
+    -fx-background-color: black;
+}
+
+.table-view
+{
+    -fx-background-color:    #545454;
+    -fx-border-color:     #737373;
+    -fx-text-fill:     #E8E8E8;
+}
+
+.table-view .table-column{
+    -fx-text-fill: red
+    -fx-font-weight: bold;
+}

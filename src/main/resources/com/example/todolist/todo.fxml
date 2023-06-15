@@ -75,7 +75,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="600.0">
                      <children>
-                        <TableView fx:id="table" layoutY="48.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="311.0" prefWidth="600.0" style="-fx-background-color: #4a4d59;" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <TableView fx:id="table" nodeOrientation="LEFT_TO_RIGHT" prefHeight="311.0" prefWidth="600.0" style="-fx-background-color: #4a4d59;" stylesheets="@styles/Table.css" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <columns>
                               <TableColumn fx:id="statusPrimaryColumn" prefWidth="59.0" style="-fx-background-color: #bcc0d4;" text="Статус" />
                               <TableColumn fx:id="taskPrimaryColumn" prefWidth="340.0" style="-fx-background-color: #bcc0d4;" text="Задача" />
