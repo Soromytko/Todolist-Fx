@@ -20,7 +20,8 @@ public class CreateTaskController {
         System.out.println(description.getText());
         System.out.println(deadline.getValue());
 
-        AppData.tasks.add(new TaskItem(new CheckBox(), name.getText(), deadline.getValue()));
+        TaskItem task = new TaskItem(new CheckBox(), name.getText(), deadline.getValue(), description.getText());
+        AppData.tasks.add(task);
 
         WindowLoader.getStage(event).close();
     }

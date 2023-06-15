@@ -80,7 +80,7 @@
                               <TableColumn fx:id="statusPrimaryColumn" prefWidth="59.0" style="-fx-background-color: #bcc0d4;" text="Статус" />
                               <TableColumn fx:id="taskPrimaryColumn" prefWidth="340.0" style="-fx-background-color: #bcc0d4;" text="Задача" />
                               <TableColumn fx:id="deadLinePrimaryColumn" prefWidth="75.0" style="-fx-background-color: #bcc0d4;" text="Срок" />
-                              <TableColumn prefWidth="75.0" style="-fx-background-color: #bcc0d4;" text="Описание" />
+                              <TableColumn fx:id="descriptionPrimaryColumn" prefWidth="75.0" style="-fx-background-color: #bcc0d4;" text="Описание" />
                            </columns>
                            <columnResizePolicy>
                               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
