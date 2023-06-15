@@ -2,6 +2,7 @@ package com.example.todolist;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.CheckBox;
@@ -11,6 +12,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
@@ -20,21 +22,25 @@ public class MainController implements Initializable {
     @FXML private  TableColumn taskPrimaryColumn;
     @FXML private  TableColumn deadLinePrimaryColumn;
 
+    @FXML private void onCreateNewTask(ActionEvent event) {
+        WindowLoader.load("task.fxml");
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        var data = FXCollections.observableArrayList(
-                new TaskItem(new CheckBox(), "https://www.wikipedia.org/", "Наука"),
-                new TaskItem(new CheckBox(), "https://store.steampowered.com/", "Развлечения"),
-                new TaskItem(new CheckBox(), "https://ria.ru/", "Новости")
+        AppData.tasks = FXCollections.observableArrayList(
+                new TaskItem(new CheckBox(), "Walk the dog/", LocalDate.now()),
+                new TaskItem(new CheckBox(), "Read the book", LocalDate.now()),
+                new TaskItem(new CheckBox(), "Play a game", LocalDate.now())
         );
-        table.setItems(data);
+        table.setItems(AppData.tasks);
         TableColumn<TaskItem, CheckBox> statusColumn = new TableColumn<TaskItem, CheckBox>("Статус");
         TableColumn<TaskItem, String> taskColumn = new TableColumn<TaskItem, String>("Задача");
-        TableColumn<TaskItem, String> deadlineColumn = new TableColumn<TaskItem, String>("Дедлайн");
+        TableColumn<TaskItem, LocalDate> deadlineColumn = new TableColumn<TaskItem, LocalDate>("Дедлайн");
         statusColumn.setCellValueFactory(new PropertyValueFactory<TaskItem, CheckBox>("status"));
         taskColumn.setCellValueFactory(new PropertyValueFactory<TaskItem, String>("task"));
-        deadlineColumn.setCellValueFactory(new PropertyValueFactory<TaskItem, String>("deadline"));
+        deadlineColumn.setCellValueFactory(new PropertyValueFactory<TaskItem, LocalDate>("deadline"));
         table.getColumns().set(0, statusColumn);
         table.getColumns().set(1, taskColumn);
         table.getColumns().set(2, deadlineColumn);

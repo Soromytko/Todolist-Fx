@@ -1,0 +1,9 @@
+.date-picker-popup > * > .day-cell {
+    -fx-background-color: #747787;
+    -fx-text-fill: white;
+}
+
+.date-picker .text-field {
+    -fx-control-inner-background: #747787;
+    -fx-text-fill: white;
+}
