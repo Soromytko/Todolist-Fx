@@ -1,0 +1,13 @@
+.text-area
+{
+    -fx-background-color:  #747787;
+    -fx-background-radius: 3;
+    -fx-text-fill: white
+}
+
+.text-area .content
+{
+    -fx-background-color:  #747787;
+    -fx-background-radius: 3;
+    -fx-text-fill: white
+}
