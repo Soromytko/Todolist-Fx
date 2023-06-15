@@ -88,7 +88,7 @@
                         </TableView>
                         <HBox alignment="CENTER" layoutY="309.0" prefHeight="34.0" prefWidth="600.0" style="-fx-background-color: #bcc0d4; -fx-spacing: 48;" AnchorPane.bottomAnchor="2.200000000000024" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                            <children>
-                              <CheckBox mnemonicParsing="false" selected="true" text="Активные" />
+                              <CheckBox onAction="#onActiveSelect" mnemonicParsing="false" selected="true" text="Активные" />
                               <CheckBox mnemonicParsing="false" selected="true" text="Выполненные" />
                               <CheckBox mnemonicParsing="false" selected="true" text="Просроченные" />
                            </children>

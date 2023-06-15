@@ -10,7 +10,10 @@
     -fx-text-fill:     #E8E8E8;
 }
 
+/*
 .table-view .table-column{
-    -fx-text-fill: red
-    -fx-font-weight: bold;
+	-fx-background-color:    #545454;
+    -fx-text-fill: red;
 }
+*/
+

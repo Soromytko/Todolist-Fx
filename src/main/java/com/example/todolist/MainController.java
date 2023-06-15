@@ -27,6 +27,11 @@ public class MainController implements Initializable {
         WindowLoader.load("task.fxml");
     }
 
+    @FXML private void onActiveSelect(ActionEvent event) {
+        System.out.println("SDSDSD");
+    }
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
